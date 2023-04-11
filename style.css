@@ -1,0 +1,85 @@
+
+@import url('https://fonts.maateen.me/bangla/font.css');
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Bangla', sans-serif !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+body {
+  background-image: url(./Assets/image/webbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+input,textarea,select {
+  box-shadow: none !important;
+}
+
+.formwrap {
+  background-color: #ffffff52;
+}
+
+.loaderWrap {
+  width: 100vw !important;
+  height: 100vh !important;
+  background: #00000036;
+  color: white;
+  font-size: 3rem;
+  display: grid;
+  place-content: center;
+  align-items: center;
+}
+
+.subTitle h3{
+  color: white;
+  background: #ff6347b8;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle,.gethelpTitle,.hflistingTitle {
+  background: #ffffff8c;
+  padding: 2rem;
+}
+
+.representativetitle:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: red;
+  border-radius: 100%;
+  top: 42px;
+  left: 10px;
+}
+.hflistingTitle:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: red;
+  border-radius: 100%;
+  top: 42px;
+  left: 10px;
+}
+
+.representativetitle,.hflistingTitle {
+  position: relative;
+  padding-left: 3rem;
+}

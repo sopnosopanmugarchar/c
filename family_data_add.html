@@ -1,0 +1,524 @@
+<!DOCTYPE red>
+<red lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./Assets/image/favicon.png"
+      type="image/x-icon"
+    />
+    <title>পরিবারের তথ্য যোগ করুন</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.yellow" />
+  </head>
+  <body>
+    <div class="loaderWrap">
+      <div class="spinner-border"></div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div
+          class="brand d-flex justify-content-center align-content-center pt-3"
+        >
+          <h1 class="text-center btn btn-success fs-1">
+            পরিবারের তথ্য যোগ করুন
+          </h1>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid sticky-top">
+            <a class="navbar-brand fs-1" href="./index.red"
+              ><img
+                class="rounded-circle"
+                src="./Assets/image/logo.jpg"
+                alt="logo"
+                style="width: 100px"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-2 mb-2">
+                  <a class="btn btn-success fs-4" href="./family_data_add.red"
+                    >পরিবারের তথ্য যোগ করুন</a
+                  >
+                </li>
+                <li class="nav-item me-2 mb-2">
+                  <a class="btn btn-primary fs-4" href="./representative.red"
+                    >প্রতিনিধি হতে চান?</a
+                  >
+                </li>
+                <li class="nav-item me-2 mb-2">
+                  <a class="btn btn-danger fs-4" href="./donate.red"
+                    >দান সম্পর্কে আমাদের জানান</a
+                  >
+                </li>
+                <li class="nav-item me-2 mb-2">
+                  <a class="btn btn-warning fs-4" href="./get_help.red"
+                    >সাহায্য পাবে</a
+                  >
+                </li>
+                <li class="nav-item me-2 mb-2"></li>
+                <li class="nav-item me-2 mb-2">
+                  <a
+                    class="btn btn-primary fs-4"
+                    href="./list_helped_people.red"
+                    >সাহায্য প্রাপ্ত পরিবারের তালিকা দেখুন</a
+                  >
+                </li>
+              </ul>
+              <div class="emergency mb-2">
+                <div>
+                  <a href="tel:01968668506" class="btn btn-danger fs-4"
+                    >জরুরি প্রয়োজনে কল করুন</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section>
+      <div class="container p-3">
+        <form
+          action="https://sheetdb.io/api/v1/odxza6403z7of"
+          method="post"
+          id="sheetdb-form"
+        >
+          <div class="formwrap p-4 rounded">
+            <div class="mb-3">
+              <label for="date" class="form-label fs-4">১। তারিখঃ</label>
+              <input
+                type="date"
+                class="form-control"
+                id="date"
+                name="data[date]"
+                placeholder="তারিখ"
+                required
+              />
+              <div id="datemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="fullname" class="form-label fs-4"
+                >২। সম্পূর্ন নামঃ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="fullname"
+                name="data[fullname]"
+                placeholder="সম্পূর্ন নাম"
+                required
+              />
+              <div id="fullnamemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label fs-4">৩। বয়সঃ</label>
+              <input
+                type="number"
+                class="form-control"
+                id="age"
+                name="data[age]"
+                placeholder="বয়স"
+                required
+              />
+              <div id="agemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="mobile" class="form-label fs-4"
+                >৪। মোবাইল নাম্বারঃ</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="mobile"
+                name="data[mobilenumber]"
+                placeholder="মোবাইল নাম্বার"
+                required
+              />
+              <div id="mobilemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="fathername" class="form-label fs-4"
+                >৫। পিতার নামঃ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="fathername"
+                name="data[fathername]"
+                placeholder="পিতার নাম"
+                required
+              />
+              <div id="fathernamemsg" class="form-text"></div>
+            </div>
+            <!-- <div class="mb-3">
+            <label for="mothername" class="form-label fs-4">৬। মাতার নামঃ</label>
+            <input type="text" class="form-control" id="mothername" name="data[Mother Name]" placeholder="মাতার নাম" required>
+            <div id="mothernamemsg" class="form-text"></div>
+          </div> -->
+            <div class="mb-3">
+              <label for="villagename" class="form-label fs-4"
+                >৬। গ্রামের নামঃ</label
+              >
+              <!-- <input type="text" class="form-control" id="villagename" name="data[Village Name]" placeholder="গ্রামের নাম" required> -->
+              <select
+                class="form-select"
+                name="data[villagename]"
+                id="villagename"
+                required
+              >
+                <option value="">গ্রামের নাম নির্বাচন করুন</option>
+                <option value="মুগারচর">মুগারচর</option>
+              </select>
+              <div id="villagenamemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="homename" class="form-label fs-4"
+                >৭। বাড়ীর নামঃ</label
+              >
+              <!-- <input type="text" class="form-control" id="homename" name="data[Home Name]" placeholder="বাড়ীর নাম" required> -->
+              <select
+                class="form-select"
+                name="data[homename]"
+                id="homename"
+                required
+              >
+                <option value="">বাড়ীর নাম নির্বাচন করুন</option>
+                <option value="চেয়ারম্যান বাড়ি ">চেয়ারম্যান বাড়ি</option>
+                <option value=" লন্ডনী বাড়ি">লন্ডনী বাড়ি</option>
+                <option value="হক সাব বাড়ি">হক সাব বাড়ি</option>
+                <option value="বাঙ্গাল বাড়ি">বাঙ্গাল বাড়ি</option>
+                <option value="পাগলা বাড়ি">পাগলা বাড়ি</option>
+                <option value="আবিদ আলি সরকার বাড়ি">আবিদ আলি সরকার বাড়ি</option>
+                <option value="বড় বাড়ি">বড় বাড়ি</option>
+                <option value="মৌলবি বাড়ি">মৌলবি বাড়ি</option>
+                <option value="মোল্লা বাড়ি">মোল্লা বাড়ি</option>
+                <option value="ছাড়া বাড়ি">ছাড়া বাড়ি</option>
+                <option value="কাজি বাড়ি">কাজি বাড়ি</option>
+                <option value="কেন্তা ভূঁইয়া বাড়ি">কেন্তা ভূঁইয়া বাড়ি</option>
+                <option value="সুলতান হাজী বাড়ি">সুলতান হাজী বাড়ি</option>
+                <option value="মুরাদ বাড়ি">মুরাদ বাড়ি</option>
+                <option value="হাজী নান্দু মেম্বার বাড়ি">
+                  হাজী নান্দু মেম্বার বাড়ি
+                </option>
+                <option value="হাজী বাড়ি">হাজী বাড়ি</option>
+                <option value="সরা বাড়ি">সরা বাড়ি</option>
+                <option value="ভূঁইয়া বাড়ি">ভূঁইয়া বাড়ি</option>
+                <option value="দাদন বাড়ি">দাদন বাড়ি</option>
+              </select>
+              <div id="homenamemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="homeno" class="form-label fs-4">৮। বাড়ীর নংঃ</label>
+              <input
+                type="text"
+                class="form-control"
+                id="homeno"
+                name="data[homeno]"
+                placeholder="বাড়ীর নং"
+              />
+              <div id="homenomsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="occupation" class="form-label fs-4">৯। পেশাঃ</label>
+              <input
+                type="text"
+                class="form-control"
+                id="occupation"
+                name="data[occupation]"
+                placeholder="পেশা"
+                required
+              />
+              <div id="occupationmsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="monthlyincome" class="form-label fs-4"
+                >১০। পরিবারের আয় (মাসিক)</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="monthlyincome"
+                name="data[monthlyincome]"
+                placeholder="পরিবারের আয় (মাসিক)"
+                required
+              />
+              <div id="monthlyincomemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="familymember" class="form-label fs-4"
+                >১১। পরিবারের সদস্য সংখ্যাঃ</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="familymember"
+                name="data[familymember]"
+                placeholder="পরিবারের সদস্য সংখ্যা"
+                required
+              />
+              <div id="familymembermsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="familymenmember" class="form-label fs-4"
+                >১২। পরিবারের পুরুষ সদস্যঃ</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="familymenmember"
+                name="data[familymenmember]"
+                placeholder="পরিবারের পুরুষ সদস্য"
+                required
+              />
+              <div id="familymenmembermsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="familywomenmember" class="form-label fs-4"
+                >১৩। পরিবারের মহিলা সদস্যঃ</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="familywomenmember"
+                name="data[familywomenmember]"
+                placeholder="পরিবারের মহিলা সদস্য"
+                required
+              />
+              <div id="familywomenmembermsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="familychlildrenmember" class="form-label fs-4"
+                >১৪। পরিবারের শিশু সদস্যঃ</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="familychlildrenmember"
+                name="data[familychildrenmember]"
+                placeholder="পরিবারের শিশু সদস্য"
+              />
+              <div id="familychlildrenmembermsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="illness" class="form-label fs-4"
+                >১৫। পরিবারের কেউ কোনো বিশেষ রোগে আক্রান্ত কিনা? তা সম্পর্কে
+                লিখুন।</label
+              >
+              <textarea
+                class="form-control"
+                rows="5"
+                id="illness"
+                name="data[illness]"
+                placeholder="দুরা রোগ্য"
+              ></textarea>
+              <div id="illnessmsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="easeofclothing" class="form-label fs-4"
+                >১৬। পোশাকে স্বচ্ছলতাঃ</label
+              >
+              <!-- <input type="text" class="form-control" id="easeofclothing" name="data[Ease of clothing]" placeholder="পোশাকে স্বচ্ছলতা"> -->
+              <select
+                class="form-select"
+                name="data[easeofclothing]"
+                id="easeofclothing"
+                required
+              >
+                <option value="">পোশাকে স্বচ্ছলতা নির্ধারন করুন</option>
+                <option value="আছে">আছে</option>
+                <option value="নেই">নেই</option>
+              </select>
+              <div id="easeofclothingmsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="googlelocation" class="form-label fs-4"
+                >১৭। গুগুল লোকেশনঃ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="googlelocation"
+                name="data[googlelocation]"
+                placeholder="গুগুল লোকেশন"
+                required
+              />
+              <div id="googlelocationmsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="temporaryaddress" class="form-label fs-4"
+                >১৮। অস্থায়ী ঠিকানাঃ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="temporaryaddress"
+                name="data[temporaryaddress]"
+                placeholder="অস্থায়ী ঠিকানা"
+              />
+              <div id="temporaryaddressmsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="protinidiname" class="form-label fs-4"
+                >১৯। প্রতিনিধির নামঃ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="protinidiname"
+                name="data[representativename]"
+                placeholder="যিনি তথ্য সংযোজন করতেছেন | নিজের নাম লিখুন"
+              />
+              <div id="protinidinamemsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="codenumber" class="form-label fs-4">২০। সংকেতঃ</label><br>
+              <input type="radio" id="red" name="data[poorstage]" value="red">
+                <label for="red">লাল</label><br>
+               
+              <input
+                type="radio"
+                id="yellow"
+                name="data[poorstage]"
+                value="yellow"
+              >
+                <label for="yellow">হলুদ</label><br>
+               
+              <input
+                type="radio"
+                id="green"
+                name="data[poorstage]"
+                value="green"
+              >
+                <label for="green">সবুজ</label>
+              <div id="codenumbermsg" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label fs-4"
+                >২১। পাসওয়ার্ডঃ</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                required
+                placeholder="সঠিক পাসওয়ার্ড দিন"
+              />
+              <div id="passwordmsg" class="form-text fs-6 text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <div id="addmessage" class="form-text"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary fs-4">
+              তথ্য যোগ করুন
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      const passmsg = document.getElementById("passwordmsg");
+      const password = document.getElementById("password");
+      const msg = document.getElementById("addmessage");
+      const sheetLink = document.getElementById("sheetLink");
+
+      let form = document.getElementById("sheetdb-form");
+
+      // window.addEventListener("contextmenu", (e) => {
+      //   e.preventDefault();
+      // });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (password.value == 1212) {
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+          })
+            .then((response) => response.json())
+            .then((red) => {
+              msg.innerred = "পরিবারের তথ্য সফল ভাবে যুক্ত হয়েছে 😍";
+
+              form.reset();
+              setTimeout(() => {
+                msg.innerred = "";
+              }, 2000);
+            });
+        } else {
+          passmsg.innerred =
+            "আপনি ভুল পাসওয়ার্ড দিয়েছে। আমাদের সাথে কাজ করতে চাইলে প্রতিনিধি পদে যুক্ত হতে পারেন ❤️";
+          setTimeout(() => {
+            passmsg.innerred = "";
+          }, 5000);
+        }
+
+        // auto code index
+
+        setTimeout(() => {
+          fetch("https://sheetdb.io/api/v1/odxza6403z7of")
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data.length);
+              let index = data.length - 1;
+              console.log(data[index].codenumber);
+
+              fetch(
+                `https://sheetdb.io/api/v1/odxza6403z7of/codenumber/${data[index].codenumber}`,
+                {
+                  method: "PATCH",
+                  headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    data: {
+                      helpstatus: `no${index}`,
+                    },
+                  }),
+                }
+              )
+                .then((response) => response.json())
+                .then((data) => {
+                  // console.log(data)
+                });
+            });
+        }, 5000);
+      });
+    </script>
+
+    <script></script>
+
+    <script>
+      const loader = document.querySelector(".loaderWrap");
+      const spin = document.querySelector(".loaderWrap>div");
+      const body = document.querySelector("body");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+        body.style.overflow = "initial";
+        spin.classList.remove("spinner-border");
+      });
+    </script>
+  </body>
+</red>

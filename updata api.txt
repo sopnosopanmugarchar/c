@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="show"></h1>
+
+    <script>
+      const show = document.getElementById('show');
+      show.innerHTML = 'df';
+
+      fetch('https://sheetdb.io/api/v1/r9idtakig9x8w')
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          console.log(data[0].status);
+
+
+          fetch(`https://sheetdb.io/api/v1/r9idtakig9x8w/status/${data[0].status}`, {
+        method: 'PATCH',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          data: {
+            status: 'approve',
+          },
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+
+        });
+
+    </script>
+  </body>
+</html>
