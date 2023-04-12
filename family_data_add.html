@@ -268,7 +268,6 @@
                 id="monthlyincome"
                 name="data[monthlyincome]"
                 placeholder="পরিবারের আয় (মাসিক)"
-                required
               />
               <div id="monthlyincomemsg" class="form-text"></div>
             </div>
@@ -368,7 +367,6 @@
                 id="googlelocation"
                 name="data[googlelocation]"
                 placeholder="গুগুল লোকেশন"
-                required
               />
               <div id="googlelocationmsg" class="form-text"></div>
             </div>
@@ -399,18 +397,18 @@
               <div id="protinidinamemsg" class="form-text"></div>
             </div>
             <div class="mb-3">
-              <label for="codenumber" class="form-label fs-4">২০। সংকেতঃ</label
-              >
+              <label class="form-label fs-4">২০। সংকেতঃ</label>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
-                  id="HTML"
+                  id="red"
                   name="data[poorstage]"
                   value="HTML"
-                />
-                  <label class="form-check-label" for="HTML">লাল</label>
-                 
+                  required
+                >
+                <label class="form-check-label" for="red">লাল</label>
+            
               </div>
               <div class="form-check">
                 <input
@@ -419,10 +417,11 @@
                   id="yellow"
                   name="data[poorstage]"
                   value="yellow"
-                />
-                  <label class="form-check-label" for="yellow">হলুদ</label>
+                  required
+                >
+                <label class="form-check-label" for="yellow">হলুদ</label>
               </div>
-               
+              
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -430,14 +429,29 @@
                   id="green"
                   name="data[poorstage]"
                   value="green"
-                />
-                  <label class="form-check-label" for="green">সবুজ</label>
+                  required
+                >
+                <label class="form-check-label" for="green">সবুজ</label>
               </div>
               <div id="codenumbermsg" class="form-text"></div>
             </div>
             <div class="mb-3">
+              <label for="codenumber" class="form-label fs-4"
+                >২১। কোড নাম্বারঃ</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="codenumber"
+                name="data[codenumber]"
+                placeholder="ফোন নাম্বারের শেষের ৩ সংখ্যা দিন"
+                required
+              />
+              <div id="codenumberdmsg" class="form-text fs-6 text-danger"></div>
+            </div>
+            <div class="mb-3">
               <label for="password" class="form-label fs-4"
-                >২১। পাসওয়ার্ডঃ</label
+                >২২। পাসওয়ার্ডঃ</label
               >
               <input
                 type="password"

@@ -80,6 +80,7 @@
           <table class="table table-bordered">
             <thead>
               <tr>
+                <th>নং</th>
                 <th>প্রতিনিধির নাম</th>
                 <th>মোবাইল নাম্বার</th>
                 <th>গ্রামের নাম</th>
@@ -203,15 +204,17 @@
   fetch('https://sheetdb.io/api/v1/bzaen2kox9ids')
           .then((response) => response.json())
           .then((data) => {
-            // console.log(data[0]);
+            // console.log(data[index]);
             data.forEach((singleRepre,index) => {
+
               if(singleRepre.approval === "TRUE"){
                 tableBody.innerHTML += `<tr>
+                  <td>${1}</td>
                   <td>${singleRepre.fullname}</td>
                   <td><a href="tel:0${singleRepre.mobilenumber}">0${singleRepre.mobilenumber}</a></td>
                   <td>${singleRepre.villagename}</td>
                   <td>${singleRepre.homename}</td>
-                  <td>00${index+1}</td>
+                  <td>${data[index].mobilenumber.slice(6)}</td>
                 </tr>`;
               }
             });
