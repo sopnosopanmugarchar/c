@@ -105,7 +105,7 @@
 
   <section>
     <div class="container p-3">
-      <form action="https://sheetdb.io/api/v1/r9idtakig9x8w" method="post" id="sheetdb-form">
+      <form action="https://sheetdb.io/api/v1/nlj7kmynuphz0" method="post" id="sheetdb-form">
         <div class="formwrap p-4 rounded">
           <div class="mb-3">
             <label for="date" class="form-label fs-4">তারিখঃ</label>
@@ -190,6 +190,10 @@
     const spin = document.querySelector('.loaderWrap>div');
     const body = document.querySelector('body');
 
+    window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+
     window.addEventListener('load',function(){
       loader.style.display = 'none';
       body.style.overflow = 'initial';
@@ -201,7 +205,7 @@
   <script>
   const tableBody = document.getElementById('tableBody');
 
-  fetch('https://sheetdb.io/api/v1/bzaen2kox9ids')
+  fetch('https://sheetdb.io/api/v1/jjlyebrhlf37q')
           .then((response) => response.json())
           .then((data) => {
             // console.log(data[index]);

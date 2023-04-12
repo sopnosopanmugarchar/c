@@ -192,6 +192,10 @@
       const spin = document.querySelector(".loaderWrap>div");
       const body = document.querySelector("body");
 
+      window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+
       window.addEventListener("load", function () {
         loader.style.display = "none";
         body.style.overflow = "initial";

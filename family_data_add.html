@@ -107,7 +107,7 @@
     <section>
       <div class="container p-3">
         <form
-          action="https://sheetdb.io/api/v1/odxza6403z7of"
+          action="https://sheetdb.io/api/v1/pt4s4d14c4jkg"
           method="post"
           id="sheetdb-form"
         >
@@ -146,7 +146,6 @@
                 id="age"
                 name="data[age]"
                 placeholder="বয়স"
-                required
               />
               <div id="agemsg" class="form-text"></div>
             </div>
@@ -160,7 +159,6 @@
                 id="mobile"
                 name="data[mobilenumber]"
                 placeholder="মোবাইল নাম্বার"
-                required
               />
               <div id="mobilemsg" class="form-text"></div>
             </div>
@@ -174,7 +172,6 @@
                 id="fathername"
                 name="data[fathername]"
                 placeholder="পিতার নাম"
-                required
               />
               <div id="fathernamemsg" class="form-text"></div>
             </div>
@@ -254,7 +251,6 @@
                 id="occupation"
                 name="data[occupation]"
                 placeholder="পেশা"
-                required
               />
               <div id="occupationmsg" class="form-text"></div>
             </div>
@@ -281,7 +277,6 @@
                 id="familymember"
                 name="data[familymember]"
                 placeholder="পরিবারের সদস্য সংখ্যা"
-                required
               />
               <div id="familymembermsg" class="form-text"></div>
             </div>
@@ -295,7 +290,6 @@
                 id="familymenmember"
                 name="data[familymenmember]"
                 placeholder="পরিবারের পুরুষ সদস্য"
-                required
               />
               <div id="familymenmembermsg" class="form-text"></div>
             </div>
@@ -309,7 +303,6 @@
                 id="familywomenmember"
                 name="data[familywomenmember]"
                 placeholder="পরিবারের মহিলা সদস্য"
-                required
               />
               <div id="familywomenmembermsg" class="form-text"></div>
             </div>
@@ -349,7 +342,6 @@
                 class="form-select"
                 name="data[easeofclothing]"
                 id="easeofclothing"
-                required
               >
                 <option value="">পোশাকে স্বচ্ছলতা নির্ধারন করুন</option>
                 <option value="আছে">আছে</option>
@@ -454,7 +446,7 @@
                 >২২। পাসওয়ার্ডঃ</label
               >
               <input
-                type="password"
+                type="number"
                 class="form-control"
                 id="password"
                 required
@@ -483,13 +475,9 @@
 
       let form = document.getElementById("sheetdb-form");
 
-      // window.addEventListener("contextmenu", (e) => {
-      //   e.preventDefault();
-      // });
-
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (password.value == 1212) {
+        if (password.value === 3534) {
           fetch(form.action, {
             method: "POST",
             body: new FormData(document.getElementById("sheetdb-form")),
@@ -514,7 +502,7 @@
         // auto code index
 
         setTimeout(() => {
-          fetch("https://sheetdb.io/api/v1/odxza6403z7of")
+          fetch("https://sheetdb.io/api/v1/pt4s4d14c4jkg")
             .then((res) => res.json())
             .then((data) => {
               console.log(data.length);
@@ -522,7 +510,7 @@
               console.log(data[index].codenumber);
 
               fetch(
-                `https://sheetdb.io/api/v1/odxza6403z7of/codenumber/${data[index].codenumber}`,
+                `https://sheetdb.io/api/v1/pt4s4d14c4jkg/codenumber/${data[index].codenumber}`,
                 {
                   method: "PATCH",
                   headers: {
@@ -545,12 +533,15 @@
       });
     </script>
 
-    <script></script>
 
     <script>
       const loader = document.querySelector(".loaderWrap");
       const spin = document.querySelector(".loaderWrap>div");
       const body = document.querySelector("body");
+
+      window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
 
       window.addEventListener("load", function () {
         loader.style.display = "none";

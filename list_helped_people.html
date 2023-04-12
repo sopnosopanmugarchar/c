@@ -62,14 +62,81 @@
 
   <section>
     <div class="container">
-      <table id='show'>
-
-
-      </table>
+      <div class="helplistTitle">
+        <h1>সাহায্যপ্রাপ্ত পরিবারের তালিকা দেখুন-</h1>
+      </div>
     </div>
   </section>
 
-  <script>
+  <section>
+    <div class="container">
+      <div id="accordion">
+        <div class="card mb-2">
+          <div class="card-header">
+            <a class="btn border-0" data-bs-toggle="collapse" href="#collapseOne">
+              ঈদ উল ফিতর - ২০২৩
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              <!-- list perple table  -->
+              <div class="gethelpTable" style="background: #ffffffed;">
+                <div class="table-responsive">          
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>নাম</th>
+                        <th>মোবাইল নাম্বার</th>
+                        <th>গ্রামের নাম</th>
+                        <th>বাড়ীর নাম</th>
+                        <th>কোড নাম্বার</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                      <tr>
+                        <td>শাকিল</td>
+                        <td><a href="tel:0150000000">০১৫০০০০০০০</a></td>
+                        <td>মুগারচর</td>
+                        <td>ভুইয়া বাড়ী</td>
+                        <td>001</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-header">
+            <a class="collapsed btn border-0" data-bs-toggle="collapse" href="#collapseTwo">
+              ঈদ উল আযহা - ২০২৩
+          </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              <!-- list perple table  -->
+            </div>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-header">
+            <a class="collapsed btn border-0" data-bs-toggle="collapse" href="#collapseThree">
+              ঈদ উল ফিতর - ২০২৪
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              <!-- list perple table  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <script>
     const show = document.getElementById('show');
 
     fetch('https://sheetdb.io/api/v1/odxza6403z7of')
@@ -91,12 +158,16 @@
               }
             });
 
-  </script>
+  </script> -->
 
   <script>
     const loader = document.querySelector('.loaderWrap');
-    const spin = document.querySelector('.loader>div');
+    const spin = document.querySelector('.loaderWrap>div');
     const body = document.querySelector('body');
+
+    window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
 
     window.addEventListener('load',function(){
       loader.style.display = 'none';

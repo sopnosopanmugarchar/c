@@ -70,7 +70,7 @@
 
   <section>
     <div class="container p-3">
-      <form action=" https://sheetdb.io/api/v1/bzaen2kox9ids" method="post" id="sheetdb-form">
+      <form action="https://sheetdb.io/api/v1/jjlyebrhlf37q" method="post" id="sheetdb-form">
         <div class="formwrap p-4 rounded">
           <div class="mb-3">
             <label for="date" class="form-label fs-4">তারিখঃ</label>
@@ -260,8 +260,12 @@
 
 <script>
   const loader = document.querySelector('.loaderWrap');
-  const spin = document.querySelector('.loader>div');
+  const spin = document.querySelector('.loaderWrap>div');
   const body = document.querySelector('body');
+
+  window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
 
   window.addEventListener('load',function(){
     loader.style.display = 'none';

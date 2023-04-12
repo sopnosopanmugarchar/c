@@ -53,7 +53,7 @@ input,textarea,select {
   display: inline-block;
 }
 
-.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle,.gethelpTitle,.hflistingTitle {
+.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle,.gethelpTitle,.hflistingTitle,.helplistTitle {
   background: #ffffff8c;
   padding: 2rem;
 }

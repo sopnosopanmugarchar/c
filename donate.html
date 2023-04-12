@@ -76,6 +76,10 @@
       const msg = document.getElementById('addmessage');
       const sheetLink = document.getElementById('sheetLink');
 
+      window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+
       let form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
           e.preventDefault();

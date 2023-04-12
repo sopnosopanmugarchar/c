@@ -102,8 +102,10 @@
 
   <script>
     const tableBody = document.getElementById('tableBody');
+
+
   
-    fetch('https://sheetdb.io/api/v1/odxza6403z7of')
+    fetch('https://sheetdb.io/api/v1/pt4s4d14c4jkg')
             .then((response) => response.json())
             .then((data) => {
               // console.log(data[0].mobilenumber = '02');
@@ -131,6 +133,10 @@
     const loader = document.querySelector('.loaderWrap');
     const spin = document.querySelector('.loaderWrap>div');
     const body = document.querySelector('body');
+
+    window.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
 
     window.addEventListener('load',function(){
       loader.style.display = 'none';
