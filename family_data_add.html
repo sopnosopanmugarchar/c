@@ -477,7 +477,7 @@
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (password.value == 3534) {
+        if (password.value === 3534) {
           fetch(form.action, {
             method: "POST",
             body: new FormData(document.getElementById("sheetdb-form")),
