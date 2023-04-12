@@ -161,10 +161,10 @@
             console.log(data);
             // console.log(data[0].helpstatus);
 
-            let index = codeNum.value;
+            // let index = codeNum.value;
 
             fetch(
-              `https://sheetdb.io/api/v1/odxza6403z7of/helpstatus/${data[index].helpstatus}`,
+              `https://sheetdb.io/api/v1/odxza6403z7of/helpstatus/${data[codeNum.value].helpstatus}`,
               {
                 method: "PATCH",
                 headers: {
@@ -173,7 +173,7 @@
                 },
                 body: JSON.stringify({
                   data: {
-                    helpstatus: `yes${index}`,
+                    helpstatus: `yes${codeNum.value}`,
                   },
                 }),
               }
